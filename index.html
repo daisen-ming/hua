@@ -8,11 +8,11 @@
 		.city{width:100%;position:fixed;bottom: 0px;z-index: 100;}
 		.city img{width: 100%;}
 	</style>
-	<title>七夕快乐</title>
+	<title>七夕快乐！</title>
 </head>
 <body onselectstart = "return false">
 
-<div style="height:700px;overflow:hidden;">
+<div style="overflow:hidden;">
 
 	<canvas id='cas' style="background-color:rgba(0,5,24,1);">浏览器不支持canvas</canvas>
 	<div class="city"><img src="https://s2.doveoss.com/i/2022/08/03/6lf2txn.png" alt="" /></div>
@@ -22,6 +22,7 @@
 		<div class="shape">七夕快乐</div>
 		<div class="shape">七夕快乐</div>
 		<div class="shape">七夕快乐</div>
+        <div class="shape">七夕快乐</div>
         <div class="shape">七夕快乐</div>
         <!-- <div class="shape">万事如意</div>
         <div class="shape">心想事成</div>
@@ -36,7 +37,9 @@
 		var octx = ocas.getContext("2d");
 		var ctx = canvas.getContext("2d");
 		ocas.width = canvas.width = window.innerWidth;
-		ocas.height = canvas.height = 700;
+		// ocas.height = canvas.height = 700;
+		ocas.height = canvas.height = window.innerHeight;
+
 		var bigbooms = [];
 	
 		window.onload = function(){
@@ -60,7 +63,7 @@
 
 			var newTime = new Date();
             if(newTime-lastTime>500+(window.innerHeight-767)/2){
-				var random = Math.random()*100>2?true:false;
+				var random = Math.random()*100>40?true:false;
 				var x = getRandom(canvas.width/5 , canvas.width*4/5);
 				var y = getRandom(50 , 200);
 				if(random){
